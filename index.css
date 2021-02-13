@@ -26,3 +26,8 @@
     color:white;        
     padding:2px;
 }
+.column{
+    min-width: 10%; 
+    float:left;  
+    margin:10px;
+}

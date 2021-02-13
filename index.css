@@ -1,0 +1,28 @@
+
+.main-header{
+    text-align:center;
+    background-color:black;
+    color:white;        
+    padding:8px;
+}
+.section-header{
+    text-align:left;
+    text-indent: 10px;
+    background-color:rgb(46, 45, 45);
+    color:white;        
+    padding:2px;
+}
+.section-body{
+    text-align:left;
+    text-indent: 10px;
+    background-color:rgb(109, 108, 108);
+    color:white;        
+    padding:2px;
+}
+.section-body{
+    text-align:left;
+    text-indent: 10px;
+    background-color:rgb(109, 108, 108);
+    color:white;        
+    padding:2px;
+}

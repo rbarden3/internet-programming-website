@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+        <title>My Website</title>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1> Javascript Example </h1>
+        </header>
+        <header class="section-header">
+            <button type="button" href="../index.html"> Home </button>
+            <button type="button"> Button 2 </button>
+            <button type="button"> Button 3 </button>
+        </header>
+        <br />
+        <header class="section-header">
+            <button type="button" onclick="document.getElementById('demo').style.display='block'">Show</button>
+            <button type="button" onclick="document.getElementById('demo').style.display='none'">Hide</button>
+        </header>
+        <br />
+        <!-- Paragraph -->
+        <div id="demo">
+            <header class="section-header">
+                <h2> Intoduction </h2>
+            </header>
+            <section class="section-body">
+                <br /> 
+                    <p>JavaScript can show and hide HTML elements.</p>
+    
+                    <p id="demo" style="display:none">Element is now Visable</p>
+    
+                <br /> 
+            </section>
+        </div>
+        
 
-<h2>Javascript Example</h2>
+    
 
-<p>JavaScript can show and hide HTML elements.</p>
-
-<p id="demo" style="display:none">Element is now Visable</p>
-
-<button type="button" onclick="document.getElementById('demo').style.display='block'">Show</button>
-
-<button type="button" onclick="document.getElementById('demo').style.display='none'">Hide</button>
-
-
-</body>
+    </body>
 </html> 

@@ -23,7 +23,7 @@
             <!-- Paragraph -->
             
 
-            <div class="container">
+            <div class="container" id="content-container">
                 <div class="full-width">
                     <header class="section-header">
                         <h2> Intoduction </h2>
@@ -98,6 +98,30 @@
             
         </div>
         
-        
+        <script>
+            function resizeElements(){ // sets all the section bodys to be the same height
+                //var wrapper=document.getElementById("content-container");
+                var elements=document.getElementsByClassName("section-body");
+                var element, i, l=elements.length;
+                var maxWidth=0, maxHeight=0;
+                //console.log(elements);
+                for (i=0;i<l;i++)
+                {
+                    element=elements[i];
+                    if (maxWidth<element.offsetWidth) maxWidth=element.offsetWidth;
+                    if (maxHeight<element.offsetHeight) maxHeight=element.offsetHeight;
+                    //console.log(maxHeight);
+                }
+                for (i=0;i<l;i++)
+                {
+                    element=elements[i];
+                    //console.log(element);
+                    //console.log(element.offsetHeight);
+                    element.style.height = maxHeight + 'px';
+                    //console.log(element.offsetHeight);
+                }
+            }
+            window.onload = resizeElements;
+        </script>
     </body>
 </html>

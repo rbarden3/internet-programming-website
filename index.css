@@ -18,38 +18,28 @@
     text-align:left;
     text-indent: 10px;
     background-color:rgb(109, 108, 108);
-    color:white;      
-    height: max-content;   
+    color:white;        
     display:block;
     /* padding:2px; */
-    /* min-width: inherit;
-    height: fit-content; */
+    /* min-width: inherit;*/
 }
-/* .section-body{
-    text-align:left;
-    text-indent: 10px;
-    background-color:rgb(109, 108, 108);
-    color:white;        
-    padding:2px;
-} */
-.column{
-    display: flow-root;
-    float: left;
+.column {
+    display: inline-block;
+  
     min-width: 10%;
-    margin:10px;
+    margin: 10px;
     height: max-content;
-    
-}
+  }
 .half-width{
     width: 49%;
-    float: left;
+    display: inline-block;
     padding: 4px;
     height: max-content;
     /* border: 2px solid red; */
 }
 .full-width{
     width: 100%;
-    float: left;
+    display: inline-block;
     padding: 4px;
      
     /* border: 2px solid red; */
@@ -57,7 +47,11 @@
 .container{
     /* border: 3px solid rgb(0, 0, 0); */
     /* padding: 20px; */
-     
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+
     
 }
 .button-group{

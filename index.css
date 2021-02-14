@@ -43,9 +43,17 @@
 }
 .column {
     display: inline-block;
+    vertical-align:top;
     min-width: 10%;
+    width:max-content;
     height: max-content;
-  }
+    padding:4px;
+    margin: 0px;
+    margin-left: 16px;
+}
+.column-group {
+    padding:4px;
+}
 .button-group{
     text-align:left;
     text-indent: 10px;
@@ -54,9 +62,18 @@
     padding:4px;
 }
 .profile-img{
-    float: left;
+    display: inline-block;
     height:128px;
     width:128px;
     margin:4px;
     margin-right: 8px;
 }
+h5 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }

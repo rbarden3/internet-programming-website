@@ -6,7 +6,7 @@
     </head>
     <!-- <body style="background-color:rgb(35, 35, 40);"> -->
     <body style="background-color:rgb(0, 0, 0);">    
-        <div >
+        <div id="element-container">
             <div class="container">
                 <div class="full-width">
                     <header class="main-header">
@@ -37,7 +37,7 @@
                     </header>
                     <section class="section-body">
                         <div>I have experience in the following coding languages:</div>
-                        <div>
+                        <div class="column-group">
                             <ul class="column">
                                 <li>Python</li>
                                 <li>Java</li>
@@ -74,9 +74,9 @@
                     <section class="section-body">
                         <img class="profile-img" src="../profile.jfif" alt="Profile">
                         <div class="column">
-                            <h5>Email: rbarden3@students.kennesaw.edu</h5>
-                            <h5><a href="https://www.linkedin.com/in/raleigh-barden/">Linkedin</a></h5>
-                            <h5><a href="https://github.com/rbarden3">Github</a></h5>
+                            <h5><a href="mailto: rbarden3@students.kennesaw.edu">Email: rbarden3@students.kennesaw.edu</a></h5>
+                            <h5><a href="https://www.linkedin.com/in/raleigh-barden/">Linkedin: raleigh-barden</a></h5>
+                            <h5><a href="https://github.com/rbarden3">Github: rbarden3</a></h5>
                         </div>
                     </section>
                 </div>
@@ -95,7 +95,6 @@
                 for (i=0;i<l;i++)
                 {
                     element=elements[i];
-                    if (maxWidth<element.offsetWidth) maxWidth=element.offsetWidth;
                     if (maxHeight<element.offsetHeight) maxHeight=element.offsetHeight;
                     //console.log(maxHeight);
                 }
@@ -104,11 +103,12 @@
                     element=elements[i];
                     //console.log(element);
                     //console.log(element.offsetHeight);
-                    element.style.height = maxHeight + 'px';
+                    element.style.height = (maxHeight - 20)+ 'px';
                     //console.log(element.offsetHeight);
                 }
             }
             window.onload = resizeElements;
+            window.addEventListener('resize', function(event){window.location.reload(false)});
         </script>
     </body>
 </html>

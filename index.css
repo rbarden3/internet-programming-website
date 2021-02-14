@@ -39,6 +39,7 @@
     background-color:rgb(109, 108, 108);
     color:white;        
     display:block;
+    
 }
 .column {
     display: inline-block;
@@ -53,8 +54,9 @@
     padding:4px;
 }
 .profile-img{
-    display:block; 
+    float: left;
     height:128px;
     width:128px;
-    /* vertical-align: middle; */
+    margin:4px;
+    margin-right: 8px;
 }

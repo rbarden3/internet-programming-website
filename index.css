@@ -27,10 +27,11 @@
     height: max-content;
   }
 .half-width{
-    width: 49%;
+    width: 50%;
     display: inline-block;
     padding: 4px;
     height: max-content;
+    width: calc(50% - 8px);
 }
 .full-width{
     width: 100%;

@@ -84,3 +84,24 @@ p {
     margin-left: 0;
     margin-right: 0;
 }
+nav-group {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+nav-item {
+    float: left;
+}
+nav-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+}
+nav-item a:hover {
+    background-color: #111;
+  }

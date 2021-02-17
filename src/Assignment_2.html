@@ -120,12 +120,9 @@
             // create function to square numbers
             function notBad(e){
                 var input = document.getElementById("notBad_in").value;
-                console.log(input);
                 var strArr = input.split(' ');
                 var new_sent = [];
-                console.log(strArr);
                 for(var i = 0; i < strArr.length; i++){
-                    console.log(strArr[i])
                     if (strArr[i].toLowerCase().localeCompare("bad") == 0){
                         new_sent.push("bad!");
                         break;

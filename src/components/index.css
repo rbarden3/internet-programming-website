@@ -11,6 +11,18 @@
     flex-flow: row wrap;
     align-items: stretch;
 }
+.row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+}
+.third-width{
+    display: inline-block;
+    padding: 4px;
+    height: max-content;
+    width: calc((100%/3) - 8px);
+}
 .half-width{
     width: 50%;
     display: inline-block;

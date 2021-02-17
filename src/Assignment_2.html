@@ -23,71 +23,84 @@
             <!-- Paragraph -->
             <div class="container" id="content-container">
 
-                <div class="half-width">
+                <div class="third-width">
                     <header class="section-header">
-                        <h2> Academics </h2>
+                        <h2> Square a Number </h2>
                     </header>
                     <section class="section-body">
-                        <p>I have experience in the following coding languages:</p>
-                        <div class="column-group">
-                            <ul class="column">
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>C++</li>
-                            </ul>
-                            <ul class="column">
-                                <li>Javascript</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                            </ul>
-                            <ul class="column">
-                                <li>GoLang</li>
-                                <li>SQL</li>
-                                <li>PostgreSQL</li>
-                            </ul>
+                        <div class="row-container">
+                            <p>Input:</p> 
+                            <input id="num_sqrd_in" type="number" placeholder="Enter a number...">
+                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
                         </div>
+                        <div class="row-container">
+                            <p>Output: </p>
+                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                        </div>
+                        
                     </section>
                 </div>
-        
-                <div class="half-width">
+
+                <div class="third-width">
                     <header class="section-header">
-                        <h2> Work Experience </h2>
+                        <h2> Square a Number </h2>
                     </header>
                     <section class="section-body">
-                        <p>
-                            I am currently working as an independant contractor at MagMutual Insurance. During my time at this position, I have had many responsibilities including:
-                        </p>
-                        <div class="column-group">
-                            <ul class="column">
-                                <p style="text-decoration: underline;">Frontend:</p>
-                                <li>Javascript</li>
-                                <li>React</li>
-                                <li>CSS</li>
-                            </ul>
-                            <ul class="column">
-                                <p style="text-decoration: underline;">Backend:</p>
-                                <li>fast-api</li>
-                                <li>golang</li>
-                                <li>swagger</li>
-                            </ul>
-                            <ul class="column">
-                                <p style="text-decoration: underline;">Databases:</p>
-                                <li>SQL</li>
-                                <li>PostgreSQL</li>
-                                <li>MongoDB</li>
-                            </ul>
-                            <ul class="column">
-                                <p style="text-decoration: underline;">Machine Learning:</p>
-                                <li>Python</li>
-                                <li>Keras</li>
-                                <li>Pytorch</li>
-                            </ul>
+                        <div class="row-container">
+                            <p>Input:</p> 
+                            <input id="num_sqrd_in" type="number" placeholder="Enter a number..."">
+                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
                         </div>
+                        <div class="row-container">
+                            <p>Output: </p>
+                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                        </div>
+                        
                     </section>
-                </div>    
+                </div>
+
+                <div class="third-width">
+                    <header class="section-header">
+                        <h2> Square a Number </h2>
+                    </header>
+                    <section class="section-body">
+                        <div class="row-container">
+                            <p>Input:</p> 
+                            <input id="num_sqrd_in" type="number" placeholder="Enter a number..."">
+                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
+                        </div>
+                        <div class="row-container">
+                            <p>Output: </p>
+                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                        </div>
+                        
+                    </section>
+                </div>  
             </div>
         </div>
+        <script>
+            // set elements by id for easy access
+            var sqrd_input = document.getElementById("num_sqrd_in")
+            var sqrd_button = document.getElementById("num_sqrd_btn")
+            var sqrd_output = document.getElementById("num_sqrd_out") 
+
+            // create function to square numbers
+            function squareNumber(e){
+                var x = input.value;
+                var out = x * x;
+                output.innerHTML = out;
+            }
+
+            // add event listeners
+            input.addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+                squareNumber(e);}
+            });
+            button.onclick = function() {squareNumber()};
+        </script>
+
         
+
         <script>
             function resizeElements(){ // sets all the section bodys to be the same height
                 //var wrapper=document.getElementById("content-container");
@@ -111,7 +124,6 @@
                 }
             }
             window.onload = resizeElements;
-            window.addEventListener('resize', function(event){window.location.reload(false)});
-        </script>
+            window.addEventListener('resize', function(event){window.location.reload(false)});</script>
     </body>
 </html>

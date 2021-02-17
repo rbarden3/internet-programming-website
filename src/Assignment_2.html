@@ -30,12 +30,12 @@
                     <section class="section-body">
                         <div class="row-container">
                             <p>Input:</p> 
-                            <input id="num_sqrd_in" type="number" placeholder="Enter a number...">
-                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
+                            <input id="num_sqrd_in" type="number" placeholder="Enter a number">
+                            <button id="num_sqrd_btn" type="button">Square</button>
                         </div>
                         <div class="row-container">
                             <p>Output: </p>
-                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                            <textarea id="num_sqrd_out" style="resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=20></textarea>
                         </div>
                         
                     </section>
@@ -43,17 +43,17 @@
 
                 <div class="third-width">
                     <header class="section-header">
-                        <h2> Square a Number </h2>
+                        <h2> Replace Repeating Letters </h2>
                     </header>
                     <section class="section-body">
                         <div class="row-container">
                             <p>Input:</p> 
-                            <input id="num_sqrd_in" type="number" placeholder="Enter a number..."">
-                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
+                            <input id="fixStart_in" type="text" placeholder="Enter a string">
+                            <button id="fixStart_btn" type="button">Replace</button>
                         </div>
                         <div class="row-container">
                             <p>Output: </p>
-                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                            <textarea id="fixStart_out" style="resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=20></textarea>
                         </div>
                         
                     </section>
@@ -61,17 +61,17 @@
 
                 <div class="third-width">
                     <header class="section-header">
-                        <h2> Square a Number </h2>
+                        <h2> Replace Not Bad </h2>
                     </header>
                     <section class="section-body">
                         <div class="row-container">
                             <p>Input:</p> 
-                            <input id="num_sqrd_in" type="number" placeholder="Enter a number..."">
-                            <button id="num_sqrd_btn" class="green-btn" type="button">Square It</button>
+                            <input id="notBad_in" type="text" placeholder="Enter a string">
+                            <button id="notBad_btn" type="button">Replace</button>
                         </div>
                         <div class="row-container">
                             <p>Output: </p>
-                            <textarea id="num_sqrd_out" style="margin-left: 4; margin-right: 4; resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=5></textarea>
+                            <textarea id="notBad_out" style="resize: none;" readonly=True placeholder="Output" maxlength=20 rows=1 cols=20></textarea>
                         </div>
                         
                     </section>
@@ -79,48 +79,89 @@
             </div>
         </div>
         <script>
-            // set elements by id for easy access
-            var sqrd_input = document.getElementById("num_sqrd_in")
-            var sqrd_button = document.getElementById("num_sqrd_btn")
-            var sqrd_output = document.getElementById("num_sqrd_out") 
-
             // create function to square numbers
             function squareNumber(e){
-                var x = input.value;
+                var x = document.getElementById("num_sqrd_in").value;
                 var out = x * x;
-                output.innerHTML = out;
+                document.getElementById("num_sqrd_out") .innerHTML = out;
             }
 
             // add event listeners
-            input.addEventListener("keydown", function (e) {
+            document.getElementById("num_sqrd_in").addEventListener("keydown", function (e) {
                 if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
                 squareNumber(e);}
             });
-            button.onclick = function() {squareNumber()};
+            document.getElementById("num_sqrd_btn").onclick = function() {squareNumber()};
         </script>
 
-        
+        <script>
+            // create function to square numbers
+            function fixStart(e) {
+                var input = document.getElementById("fixStart_in").value;
+                var strArr = input.split('');
+                var firstChar = strArr[0].toLowerCase();
+                for (var i = 1; i < strArr.length; i++) {
+                    if (!firstChar.localeCompare(strArr[i].toLowerCase())) {
+                        strArr[i] = '*';
+                    }
+                }
+                document.getElementById("fixStart_out").innerHTML = strArr.join('');
+            }
+
+            // add event listeners
+            document.getElementById("fixStart_in").addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+                fixStart(e);}
+            });
+            document.getElementById("fixStart_btn").onclick = function() {fixStart()};
+        </script>
+
+        <script>
+            // create function to square numbers
+            function notBad(e){
+                var input = document.getElementById("notBad_in").value;
+                console.log(input);
+                var strArr = input.split(' ');
+                var new_sent = [];
+                console.log(strArr);
+                for(var i = 0; i < strArr.length; i++){
+                    console.log(strArr[i])
+                    if (strArr[i].toLowerCase().localeCompare("bad") == 0){
+                        new_sent.push("bad!");
+                        break;
+                    } else if (strArr[i].toLowerCase().localeCompare("not") == 0){
+                        new_sent.push("good!");
+                        break;
+                    } else {
+                        new_sent.push(strArr[i]);
+                    }
+                }
+
+                document.getElementById("notBad_out") .innerHTML = new_sent.join(' ');
+            }
+
+            // add event listeners
+            document.getElementById("notBad_in").addEventListener("keydown", function (e) {
+                if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+                notBad(e);}
+            });
+            document.getElementById("notBad_btn").onclick = function() {notBad()};
+        </script>
 
         <script>
             function resizeElements(){ // sets all the section bodys to be the same height
-                //var wrapper=document.getElementById("content-container");
                 var elements=document.getElementsByClassName("section-body");
                 var element, i, l=elements.length;
                 var maxWidth=0, maxHeight=0;
-                //console.log(elements);
                 for (i=0;i<l;i++)
                 {
                     element=elements[i];
                     if (maxHeight<element.offsetHeight) maxHeight=element.offsetHeight;
-                    //console.log(maxHeight);
                 }
                 for (i=0;i<l;i++)
                 {
                     element=elements[i];
-                    //console.log(element);
-                    //console.log(element.offsetHeight);
                     element.style.height = (maxHeight - 20)+ 'px';
-                    //console.log(element.offsetHeight);
                 }
             }
             window.onload = resizeElements;

@@ -1,6 +1,0 @@
-print("\nHello CS 4720,")
-print("Raleigh Barden,")
-print("My name is Raleigh, I am a senior Computer Science student here at KSU.")
-print("I enjoy data and doing data analysis. I currently work for MagMutual Insurance as an Independant Contractor.")
-print("In this role, I have developed databases, machine learning solutions, and functional web apps.")
-print("In creating these webapps, I have mainly used react-js with a python fast-api backend; however, I have also used GoLand and Material-UI (A React Framework)\n")
